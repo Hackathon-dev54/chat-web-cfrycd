@@ -1,0 +1,27 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "chat-web-cfrycd",
+  "main": "src/server/index.ts",
+  "compatibility_date": "2024-09-23",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "chatze_db","database_id": "d85abf85-0f52-41de-8eb3-c91a503e41d8"
+    }
+  ],
+  "triggers": {
+    "crons": [
+      "0 3 * * *"
+    ]
+  },
+  "vars": {
+    "NODE_ENV": "production"
+  },
+  "assets": {
+    "directory": "dist",
+    "binding": "ASSETS"
+  }
+}
